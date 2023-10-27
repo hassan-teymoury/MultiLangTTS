@@ -1,2 +1,2 @@
 # multitts
-Supports multi language text to speech taks
+Supports multi language text to speech tasks
