@@ -1,4 +1,4 @@
-TTS[all]
+TTS[all,dev]
 Cython==0.29.28
 librosa==0.8.0
 matplotlib
