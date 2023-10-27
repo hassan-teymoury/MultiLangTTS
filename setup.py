@@ -39,12 +39,13 @@ setup(
     author_email='hassan.teymoury@gmail.com',
     url="",
     license='Apache License 2.0',
-    packages=find_packages(include=["multitts"]),
+    packages=["multitts"],
     include_package_data=True,
     install_requires=parse_packages("requirements.txt"),
     ext_modules=[Extension(
-            'vits.monotonic_align.core',
-            sources=['vits/monotonic_align/core.c'])],    
+            'multitts.vits.monotonic_align.core',
+            library_dirs=['/usr/local/bin'],
+            sources=['multitts/vits/monotonic_align/core.c'])],    
     
 )
 
