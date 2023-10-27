@@ -32,23 +32,19 @@ def parse_packages(packages_txt):
 
 
 setup(
-    name='ttsmulti',
+    name='multitts',
     version='0.1.0',
     description='A Text To Speech package for multi-ligual applications',
     author='Hassan Teymouri',
     author_email='hassan.teymoury@gmail.com',
     url="",
     license='Apache License 2.0',
-    packages=['ttsmulti', 'vits'],
+    packages=find_packages(include=["multitts"]),
     include_package_data=True,
     install_requires=parse_packages("requirements.txt"),
     ext_modules=[Extension(
             'vits.monotonic_align.core',
-            library_dirs=['/usr/local/bin'],
-            sources=['vits/monotonic_align/core.c'])],
-    mdclass={
-            'build_ext': Extension,
-        },
+            sources=['vits/monotonic_align/core.c'])],    
     
 )
 
