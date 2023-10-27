@@ -1,7 +1,6 @@
 import subprocess
 from setuptools import setup, find_packages
 from setuptools.extension import Extension
-import numpy
 
 
 def parse_packages(packages_txt):
