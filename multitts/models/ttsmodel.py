@@ -157,7 +157,11 @@ class TTSMulti(object):
         all_models = manager.list_models()
         tts_models = manager.list_tts_models()
         vocoder_models = all_models[len(tts_models):len(all_models)]
-        sample_tts_model = tts_models[1]
+        
+        for ttsmodel in tts_models:
+            if "your_tts" in ttsmodel:
+                sample_tts_model = ttsmodel
+        
         sample_vocoder_model = vocoder_models[1]
 
         tts_path, tts_config_path, model_item = manager.download_model(
