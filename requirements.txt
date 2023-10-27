@@ -1,0 +1,13 @@
+TTS
+Cython==0.29.28
+librosa==0.8.0
+matplotlib
+numpy
+phonemizer==2.2.1
+scipy
+tensorboard
+torch
+torchvision
+Unidecode==1.1.1
+transformers
+accelerate
