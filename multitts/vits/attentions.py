@@ -5,9 +5,9 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-import commons
-import modules
-from modules import LayerNorm
+import multitts.vits.commons as commons
+import multitts.vits.modules as modules
+from multitts.vits.modules import LayerNorm
    
 
 class Encoder(nn.Module):

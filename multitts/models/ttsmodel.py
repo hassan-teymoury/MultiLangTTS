@@ -15,13 +15,13 @@ import math
 from torch import nn
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
-from vits import *
-import vits.commons as commons
-import vits.utils as utils
+from multitts.vits import *
+import multitts.vits.commons as commons
+import multitts.vits.utils as utils
 import argparse
 import subprocess
-from vits.data_utils import TextAudioLoader, TextAudioCollate, TextAudioSpeakerLoader, TextAudioSpeakerCollate
-from vits.models import SynthesizerTrn
+from multitts.vits.data_utils import TextAudioLoader, TextAudioCollate, TextAudioSpeakerLoader, TextAudioSpeakerCollate
+from multitts.vits.models import SynthesizerTrn
 from scipy.io.wavfile import write
 import os
 import subprocess

@@ -41,7 +41,9 @@ if __name__ == "__main__":
         author_email='hassan.teymoury@gmail.com',
         url="https://github.com/hassan-teymoury/MultiLangTTS.git",
         license='Apache License 2.0',
-        packages=["multitts.models", "multitts.vits"],
+        packages=["multitts.models", "multitts.vits",
+            "multitts.vits.text", "multitts.vits.monotonic_align",
+            "multitts.vits.configs", "multitts.vits.filelists"],
         include_package_data=True,
         install_requires=parse_packages("requirements.txt"),
         ext_modules=[Extension(
