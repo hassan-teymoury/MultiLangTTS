@@ -17,18 +17,6 @@ def parse_packages(packages_txt):
     return packages_list
 
 
-# cmd = "pip install -r requirements.txt"
-# subprocess.check_output(cmd, shell=True)
-
-
-# cmd = ";".join([
-#       "cd vits/",
-#       "cd monotonic_align/",
-#       "python3 setup.py build_ext --inplace",
-#       "cd ..",
-# ])
-
-# subprocess.check_output(cmd, shell=True)
 
 if __name__ == "__main__":
     
@@ -52,5 +40,3 @@ if __name__ == "__main__":
                 sources=['multitts/vits/monotonic_align/core.c'])],    
         
     )
-
-

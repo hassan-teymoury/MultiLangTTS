@@ -1,4 +1,4 @@
-TTS[all]==0.19.0
+TTS[all]
 Cython==0.29.28
 librosa==0.8.0
 matplotlib
