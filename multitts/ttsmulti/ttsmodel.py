@@ -26,10 +26,19 @@ from scipy.io.wavfile import write
 import os
 import subprocess
 import locale
+
 locale.getpreferredencoding = lambda: "UTF-8"
 
+pwd = os.getcwd()
+mms_model_path = pwd + "/mms_models"
+tts_json_path = pwd + "/models.json"
 
-mms_model_path = "/content/mms_models"
+
+if not os.path.isfile(tts_json_path):
+    subprocess.run(f"wget https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json -O {tts_json_path}", shell=True)
+
+
+# mms_model_path = "/content/mms_models"
 
 if not os.path.isdir(mms_model_path):
     os.mkdir(mms_model_path)
@@ -142,7 +151,7 @@ class TTSMulti(object):
             "SeyedAli/Persian-Speech-synthesis")
         self.tokenizer_hug = AutoTokenizer.from_pretrained(
             "SeyedAli/Persian-Speech-synthesis")
-        self.model_configs = "TTS/TTS/.models.json"
+        self.model_configs = tts_json_path
         path = Path(self.model_configs)
         manager = ModelManager(path)
         all_models = manager.list_models()
