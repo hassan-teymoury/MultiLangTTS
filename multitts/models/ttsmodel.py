@@ -35,7 +35,7 @@ tts_json_path = pwd + "/models.json"
 
 
 if not os.path.isfile(tts_json_path):
-    subprocess.run(f"wget https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json -O {tts_json_path}", shell=True)
+    subprocess.run(f"wget https://raw.githubusercontent.com/coqui-ai/TTS/dev/TTS/.models.json -O {tts_json_path}", shell=True)
 
 
 # mms_model_path = "/content/mms_models"
