@@ -30,23 +30,25 @@ def parse_packages(packages_txt):
 
 # subprocess.check_output(cmd, shell=True)
 
-
-setup(
-    name='multitts',
-    version='0.1.0',
-    description='A Text To Speech package for multi-ligual applications',
-    author='Hassan Teymouri',
-    author_email='hassan.teymoury@gmail.com',
-    url="",
-    license='Apache License 2.0',
-    packages=["multitts"],
-    include_package_data=True,
-    install_requires=parse_packages("requirements.txt"),
-    ext_modules=[Extension(
-            'multitts.vits.monotonic_align.core',
-            library_dirs=['/usr/local/bin'],
-            sources=['multitts/vits/monotonic_align/core.c'])],    
+if __name__ == "__main__":
     
-)
+
+    setup(
+        name='multitts',
+        version='0.1.0',
+        description='A Text To Speech package for multi-ligual applications',
+        author='Hassan Teymouri',
+        author_email='hassan.teymoury@gmail.com',
+        url="https://github.com/hassan-teymoury/MultiLangTTS.git",
+        license='Apache License 2.0',
+        packages=["multitts.models", "multitts.vits"],
+        include_package_data=True,
+        install_requires=parse_packages("requirements.txt"),
+        ext_modules=[Extension(
+                'multitts.vits.monotonic_align.core',
+                library_dirs=['/usr/local/bin'],
+                sources=['multitts/vits/monotonic_align/core.c'])],    
+        
+    )
 
 
