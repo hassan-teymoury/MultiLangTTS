@@ -36,12 +36,12 @@ To test a text to speech task on your data run the follow these steps:
 
 2. Run the following command on your terminal with arguments:
 
-__` python demo.py --text=your_text --lang=your_target_language --speaker_wav=your_speaker_wav_path --out_dir=path_of_the_results_for_speech_generated `__
+__` python tools/demo.py --text=your_text --lang=your_target_language --speaker_wav=your_speaker_wav_path --out_dir=path_of_the_results_for_speech_generated `__
 
 __Example:__
 
 ```terminal
-python demo.py --text=Ey qəhrəman övladın şanlı Vətəni! Səndən ötrü can verməyə cümlə hazırız! --lang=azj-script_latin --speaker_wav=audio.wav --out_dir=results.wav
+python tools/demo.py --text=Ey qəhrəman övladın şanlı Vətəni! Səndən ötrü can verməyə cümlə hazırız! --lang=azj-script_latin --speaker_wav=audio.wav --out_dir=results.wav
 ```
 
 __Python Script:__
